@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            ReactJS - JavaScript ES6 Modules - Named Export & Default Export
+        </title>
+    </head>
+    <body>
+        <!--  
+            1. Giới thiều về Module
+
+                *) Một module là 1 file chứa mã JavaScript mà bạn có thể tái sử dụng ở các file khác.
+
+                *) Giúp chia nhỏ ứng dụng thành các phần nhỏ, dễ quản lý và bảo trì.
+ 
+                    - Step 1: Thêm thuộc tính type="module"
+
+                *) Trong JavaScript, export được sử dụng để chia sẻ các hàm, biến, class, từ 1 module. Có 2 cách chính để export:
+
+                    - Named Export: Cho phép export nhiều phần tử từ 1 file.
+
+                    - Default Export: Mỗi module chỉ có 1 default export.
+
+            2. Named Export:
+
+                - Cho phép export nhiều phần tử từ 1 file - hàm, biến, class.
+
+                - Tại nơi cần sử dụng, ta thực hiện Import từ Named Export.
+
+            3. Default Export:
+
+                - Mỗi module chỉ có một default export - hàm, biến, class, ...
+
+            4. Lưu ý:
+
+                - Nếu file named.js có 1 Default Export, nó sẽ không được gộp vào đối tượng name khi sử dụng "import * as".
+
+            5. Đổi tên khi import
+
+                - Default Export: Đặt tên tùy ý khi import, không cần as.
+
+                - Named Export: Dùng từ khóa as.
+        -->
+
+        <!-- File JS -->
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>
