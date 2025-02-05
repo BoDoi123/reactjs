@@ -1,4 +1,4 @@
-const traiCay = ["cam", "xoai", "nho", "tao"];
+const traiCay = ["cam", "xoai", "nho", "tao", "cam"];
 
 console.log(typeof traiCay);
 console.log(traiCay);
@@ -36,3 +36,9 @@ const kq = traiCay.findIndex((item) => {
 });
 
 console.log(kq);
+
+// Exercise
+const result = traiCay.map((item) => {
+    return (item += " !");
+});
+console.log(result);
