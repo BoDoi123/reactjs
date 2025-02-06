@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite + React</title>
+    </head>
+    <body>
+        <!--  
+      1. Component trong React
+
+        *) Component: Là các khối chứa HTML, CSS, JS liên quan. Chúng thường có cùng kiểu dáng và cùng logic JS.
+
+          - Tái sử dụng: Một Component có thể được dùng nhiều lần, giúp giảm thiểu việc lặp lại code.
+
+          - Quản lý dễ dàng: Chia nhỏ giao diện phức tạp thành các thành phần nhỏ hơn.
+
+          - Tập trung mã liên quan: HTML, CSS, JS liên quan được gói gọn trong từng Component.
+
+        2. JSX
+
+          - File.jsx là JavaScript Syntax Extension - cú pháp mở rộng từ JS.
+
+          - Trình duyệt không thể hiểu trực tiếp file.jsx, mà cần một công cụ để chuyển đổi sang JS thuần.
+
+          - Trong khóa học này: Vite đóng vai trò chuyển đổi jsx -> js.
+
+          - Để chạy được vite chúng ta cần cài node js (môi trường để chạy vite).
+
+        3. Fragment
+
+          - Cách viết sử dụng cặp thẻ <> và </> là cú pháp Fragment trong React. Đây là một tính năng giúp nhóm nhiều phần tử con lại với nhau mà không cần thêm 1 thẻ HTML bao bọc nào (như div, span, ...).
+
+            VD:   function App() {
+                    return (
+                      <>
+                        <h3>Welcome</h3>
+                        <p>You are logged in</p>
+                    )
+                      </>
+                  }
+
+            - Lý do sử dụng Fragment
+
+              a. Không thêm thẻ dư thừa vào DOM: Khi bạn chỉ cần nhóm các phần tử lại mà không muốn thêm thẻ HTML bao bọc, Fragment giúp tránh việc làm "bẩn" cấu trúc DOM.
+
+              b. Giữ cho mã sạch sẽ: Giảm thiểu việc sử dụng các thẻ không cần thiết chỉ để bọc nội dung.
+    -->
+
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
+</html>
