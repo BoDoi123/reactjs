@@ -1,4 +1,5 @@
 import logo from "../../assets/logo-tuhoc.png";
+import "./Header.css";
 
 function Header() {
 	return (
@@ -15,4 +16,4 @@ function Header() {
 	);
 }
 
-export default Header
+export default Header;
