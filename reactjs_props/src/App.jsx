@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
+import TabButton from "./components/TabButton.jsx";
 
 import { myData } from "../data.js";
 
@@ -16,6 +17,17 @@ function App() {
 						<MainContent {...myData[2]} />
 						<MainContent {...myData[3]} />
 					</ul>
+				</section>
+
+				<section id="examples">
+					<h2>Examples</h2>
+					<menu>
+						<TabButton>Components</TabButton>
+						<TabButton>JSX</TabButton>
+						<TabButton>Props</TabButton>
+						<TabButton>State</TabButton>
+						{/* <TabButton label="Components" /> */}
+					</menu>
 				</section>
 			</main>
 		</>
