@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function TabButton({ children }) {
 	function handleClick() {
 		alert("Button da duoc clik");
@@ -9,6 +11,10 @@ export default function TabButton({ children }) {
 		</li>
 	);
 }
+
+TabButton.propTypes = {
+	children: PropTypes.string,
+};
 
 // export default function TabButton({ label }) {
 // 	return (
