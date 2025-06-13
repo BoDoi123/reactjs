@@ -34,25 +34,25 @@ function App() {
 				<Section id="examples" title="Examples">
 					<menu>
 						<TabButton
-							onSelect={handleSelect}
+							onClick={handleSelect}
 							isSelected={selectedTopic === "Components"}
 						>
 							Components
 						</TabButton>
 						<TabButton
-							onSelect={handleSelect}
+							onClick={handleSelect}
 							isSelected={selectedTopic === "JSX"}
 						>
 							JSX
 						</TabButton>
 						<TabButton
-							onSelect={handleSelect}
+							onClick={handleSelect}
 							isSelected={selectedTopic === "Props"}
 						>
 							Props
 						</TabButton>
 						<TabButton
-							onSelect={handleSelect}
+							onClick={handleSelect}
 							isSelected={selectedTopic === "State"}
 						>
 							State
