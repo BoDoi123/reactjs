@@ -2,14 +2,17 @@ import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
-import { myData } from "../data.js";
+import TabContent from "./components/TabContent.jsx";
+import { myData, EXAMPLES } from "../data.js";
 
 function App() {
+	const [isSelected, setIsSelected] = useState(false);
 	const [selectedTopic, setSelectedTopic] = useState(
 		"Vui lòng click vào nút"
 	);
 
 	function handleSelect(e) {
+		setIsSelected(true);
 		setSelectedTopic(e.target.innerText);
 	}
 
@@ -38,7 +41,11 @@ function App() {
 						<TabButton onSelect={handleSelect}>State</TabButton>
 						{/* <TabButton label="Components" /> */}
 					</menu>
-					{selectedTopic}
+					{isSelected ? (
+						<TabContent {...EXAMPLES[selectedTopic]} />
+					) : (
+						'"Vui lòng click vào nút"'
+					)}
 				</section>
 			</main>
 		</>
