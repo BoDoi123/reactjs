@@ -6,13 +6,15 @@ import TabContent from "./components/TabContent.jsx";
 import { myData, EXAMPLES } from "../data.js";
 
 function App() {
-	const [isSelected, setIsSelected] = useState(false);
-	const [selectedTopic, setSelectedTopic] = useState(
-		"Vui lòng click vào nút"
-	);
+	const [selectedTopic, setSelectedTopic] = useState("");
+
+	// Cách 3:
+	let tabContent = <p>Vui lòng click vào nút</p>;
+	if (selectedTopic) {
+		tabContent = <TabContent {...EXAMPLES[selectedTopic]} />;
+	}
 
 	function handleSelect(e) {
-		setIsSelected(true);
 		setSelectedTopic(e.target.innerText);
 	}
 
@@ -41,11 +43,22 @@ function App() {
 						<TabButton onSelect={handleSelect}>State</TabButton>
 						{/* <TabButton label="Components" /> */}
 					</menu>
-					{isSelected ? (
+
+					{/* Cách 1: Dùng toán tử 3 ngôi */}
+					{/* {selectedTopic ? (
 						<TabContent {...EXAMPLES[selectedTopic]} />
 					) : (
-						"Vui lòng click vào nút"
-					)}
+						<p>Vui lòng click vào nút</p>
+					)} */}
+
+					{/* Cách 2: Dùng toán tử && */}
+					{/* {!selectedTopic && <p>Vui lòng click vào nút</p>}
+					{selectedTopic && (
+						<TabContent {...EXAMPLES[selectedTopic]} />
+					)} */}
+
+					{/* Cách 3: */}
+					{tabContent}
 				</section>
 			</main>
 		</>
