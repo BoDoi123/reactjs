@@ -44,7 +44,7 @@ function App() {
 					{isSelected ? (
 						<TabContent {...EXAMPLES[selectedTopic]} />
 					) : (
-						'"Vui lòng click vào nút"'
+						"Vui lòng click vào nút"
 					)}
 				</section>
 			</main>
