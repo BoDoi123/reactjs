@@ -3,6 +3,7 @@ import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 import TabContent from "./components/TabContent.jsx";
+import Section from "./components/MainContent/Section.jsx";
 import { myData, EXAMPLES } from "../data.js";
 
 function App() {
@@ -22,21 +23,15 @@ function App() {
 		<>
 			<Header />
 			<main>
-				<section id="core-concepts">
-					<h2>Khái niệm chính trong React</h2>
+				<Section id="core-concepts" title="Khái niệm chính trong React">
 					<ul>
-						{/* <MainContent {...myData[0]} />
-						<MainContent {...myData[1]} />
-						<MainContent {...myData[2]} />
-						<MainContent {...myData[3]} /> */}
-						{myData.map((data) => {
-							return <MainContent key={data.title} {...data} />;
-						})}
+						{myData.map((data) => (
+							<MainContent key={data.title} {...data} />
+						))}
 					</ul>
-				</section>
+				</Section>
 
-				<section id="examples">
-					<h2>Examples</h2>
+				<Section id="examples" title="Examples">
 					<menu>
 						<TabButton
 							onSelect={handleSelect}
@@ -80,7 +75,7 @@ function App() {
 
 					{/* Cách 3: */}
 					{tabContent}
-				</section>
+				</Section>
 			</main>
 		</>
 	);
