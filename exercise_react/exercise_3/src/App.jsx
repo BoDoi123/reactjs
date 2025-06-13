@@ -1,11 +1,17 @@
-import {useState} from "react";
+import { useState } from "react";
 
 //bài tập 03 khoá học react js tại https://tuhoc.cc
 export default function App() {
-  return (
-    <div className="container">
-      <p>Click vào em!</p>
-      <button>Toggle btn</button>
-    </div>
-  );
+	const [isActive, setIsActive] = useState(false);
+
+	function handleActive() {
+		setIsActive(!isActive);
+	}
+
+	return (
+		<div className="container">
+			<p className={isActive ? "active" : undefined}>Click vào em!</p>
+			<button onClick={handleActive}>Toggle btn</button>
+		</div>
+	);
 }
