@@ -58,7 +58,21 @@
 
                 - Sử dụng function để kiểm soát (thêm logic nếu cần - khi thỏa mãn mới thực thi hàm)
 
-                - Có thể truyền dữ liệu động, khi nhấn vào từng nút (dữ liệu hiển thị khác nhau trên từng nút)
+                - Có thể truyền dữ liệu động, khi nhấn vào từng nút (dữ liệu hiển thị khác nhau trên từng nút).
+
+            16. State cơ bản với React
+
+                - Để cập nhật lại 1 thành phần chúng ta sử dụng useState - (State có nghĩa là trạng thái, trong ngữ cảnh này, có nghĩa là trạng thái của dữ liệu, thay đổi từ A -> B).
+
+                - Tất cả các thành phần bắt đầu bằng tiền tố use... được gọi là react Hook. Hook bản chất là các hàm tính nắng được react thiết kế sẵn.
+
+                a. Khi sử dụng bắt buộc phải gọi tại cấp cao nhất của hàm thành phần.
+
+                b. Không được gọi bên trong các câu lệnh if, while, ...
+
+                    - useState nhận 1 giá trị khởi tạo (initState) làm đối số.
+
+                    - Trả về một mảng gồm hai phần tử: giá trị hiện tại của state và 1 hàm để cập nhật state đó. 
         -->
 
 		<div id="root"></div>

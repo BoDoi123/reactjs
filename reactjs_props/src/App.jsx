@@ -1,12 +1,16 @@
+import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
-
 import { myData } from "../data.js";
 
 function App() {
+	const [selectedTopic, setSelectedTopic] = useState(
+		"Vui lòng click vào nút"
+	);
+
 	function handleSelect(e) {
-		alert(`${e.target.innerText} được chọn`);
+		setSelectedTopic(e.target.innerText);
 	}
 
 	return (
@@ -34,6 +38,7 @@ function App() {
 						<TabButton onSelect={handleSelect}>State</TabButton>
 						{/* <TabButton label="Components" /> */}
 					</menu>
+					{selectedTopic}
 				</section>
 			</main>
 		</>
