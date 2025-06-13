@@ -5,8 +5,8 @@ import TabButton from "./components/TabButton.jsx";
 import { myData } from "../data.js";
 
 function App() {
-	function handleSelect() {
-		alert("Nút được chọn");
+	function handleSelect(e) {
+		alert(`${e.target.innerText} được chọn`);
 	}
 
 	return (

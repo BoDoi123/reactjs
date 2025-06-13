@@ -49,6 +49,16 @@
                 b. Truyền hàm xử lý sự kiện đó qua prop vào TabButton.
 
                     *) Khác với children là prop đặc biệt, cần ghi đúng chính tả, prop tùy chỉnh onSelect có thể đặt tùy ý.
+
+            15. Sử dụng Arrow Function trong xử lý sự kiện 
+
+                - Hiện tại, khi lclick vào mọi nút, đều gọi hàm handleSelect giống nhau
+
+                - Mong muốn khi click vào nút, thì phải biết nút nào được click và thực hiện nhiệm vụ riêng.
+
+                - Sử dụng function để kiểm soát (thêm logic nếu cần - khi thỏa mãn mới thực thi hàm)
+
+                - Có thể truyền dữ liệu động, khi nhấn vào từng nút (dữ liệu hiển thị khác nhau trên từng nút)
         -->
 
 		<div id="root"></div>
