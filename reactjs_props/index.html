@@ -41,6 +41,14 @@
                 - Ta cần truyền một hàm xử lý sự kiện vào onClick để xác định hành động khi người dùng cần.
 
                 - Lưu ý: Ta cần truyền tên hàm handleClick, chứ không truyền hàn thực thi handleClick();
+
+            14. Truyền hàm sự kiện từ component cha vào TabButton
+
+                a. Định nghĩa hàm xử lý sự kiện tại App.jsx (component cha).
+
+                b. Truyền hàm xử lý sự kiện đó qua prop vào TabButton.
+
+                    *) Khác với children là prop đặc biệt, cần ghi đúng chính tả, prop tùy chỉnh onSelect có thể đặt tùy ý.
         -->
 
 		<div id="root"></div>
