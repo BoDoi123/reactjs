@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
 
-export default function TabButton({ children, onSelect }) {
+export default function TabButton({ children, onSelect, isSelected }) {
 	// function handleClick() {
 	// 	alert("Button da duoc clik");
 	// }
 
 	return (
 		<li>
-			<button onClick={onSelect}>{children}</button>
+			<button
+				className={isSelected ? "active" : undefined}
+				onClick={onSelect}
+			>
+				{children}
+			</button>
 		</li>
 	);
 }
@@ -15,6 +20,7 @@ export default function TabButton({ children, onSelect }) {
 TabButton.propTypes = {
 	children: PropTypes.string,
 	onSelect: PropTypes.function,
+	isSelected: PropTypes.bool,
 };
 
 // export default function TabButton({ label }) {
