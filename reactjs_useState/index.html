@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite + React</title>
+	</head>
+	<body>
+		<!-- 
+        1. Hiểu sai về cập nhật State trong React
+
+            - Một trong những lỗi phổ biến nhất khi làm việc với state trong React là nghĩ rằng state thay đổi ngay lập tức sau khi gọi setState.
+            Tuy nhiên, React không cập nhật state ngay lập tức mà chỉ đánh dấu state sẽ thay đổi trong lần render tiếp theo.
+
+            - setCount(count + 1) chỉ đánh dấu rằng state sẽ thay đổi, nhưng React không cập nhật ngay lập tức.
+
+            - Giá trị count trong console.log(count) vẫn là giá trị cũ trong render hiện tại.
+
+        2. React hoạt động với State như thế nào
+
+            - Khi gọi setState, React thực hiện các bước sau:
+
+                *) Đánh dấu state sẽ thay đổi
+
+                *) Chờ render tiếp theo
+
+                *) Cập nhật state mới khi render lại component
+
+                => Lưu ý: Trong chế độ StrictMode, React sẽ render hai lần trong môi trường development để phát hiện lỗi tiềm ẩn trong các effect hoặc lifecycle methods. Nhưng trong production, React chỉ render 1 lần.
+    -->
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
+</html>
