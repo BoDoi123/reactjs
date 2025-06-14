@@ -1,19 +1,15 @@
-import PropTypes from "prop-types";
+import ContentItem from "./ContentItem";
+import Section from "../Section";
+import { myData } from "../../../data";
 
-function MainContent({ image, title, desc }) {
+export default function MainContent() {
 	return (
-		<li>
-			<img src={image} alt={title} />
-			<h2>{title}</h2>
-			<p>{desc}</p>
-		</li>
+		<Section id="core-concepts" title="Khái niệm chính trong React">
+			<ul>
+				{myData.map((data) => (
+					<ContentItem key={data.title} {...data} />
+				))}
+			</ul>
+		</Section>
 	);
 }
-
-MainContent.propTypes = {
-	image: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	desc: PropTypes.string,
-};
-
-export default MainContent;
