@@ -1,5 +1,6 @@
 import logo from "../assets/logo-tuhoc.png";
-import "./Header.css";
+// import './Header.css'
+import classes from "./Header.module.css";
 
 export default function Header() {
 	return (
@@ -7,6 +8,7 @@ export default function Header() {
 			<img src={logo} alt="A canvas" />
 			<h1>CSS trong React</h1>
 			<p
+				className={classes["my-paragraph"]}
 				style={{
 					color: "red",
 					backgroundColor: "yellow",
